@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KinfLab</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to 'Books', books_path %>
+    <%= link_to 'Users', users_path %>
+    <%= link_to 'Authors', authors_path %>
+    <%= link_to 'Genres', genres_path %>
+    <%= link_to 'Workers', workers_path %>
+    <%= link_to 'Journals', journals_path %>
+    <%= yield %>
+  </body>
+</html>

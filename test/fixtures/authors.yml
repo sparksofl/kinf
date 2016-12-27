@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  books_id: 
+  first_name: MyString
+  last_name: MyString
+  born: 2016-12-26
+
+two:
+  books_id: 
+  first_name: MyString
+  last_name: MyString
+  born: 2016-12-26

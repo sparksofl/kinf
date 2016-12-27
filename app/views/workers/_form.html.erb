@@ -1,0 +1,33 @@
+<% if flash[:error] %>
+  <div id="error_explanation">
+    <p class="flash-error"><%= flash[:error] %></p>
+  </div>
+<% end %>
+
+<%= form_for(worker) do |f| %>
+  <% if worker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(worker.errors.count, "error") %> prohibited this worker from being saved:</h2>
+
+      <ul>
+      <% worker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :salary %>
+    <%= f.text_field :salary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exp_month %>
+    <%= f.text_field :exp_month %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

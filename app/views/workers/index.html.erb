@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Workers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Salary</th>
+      <th>Exp month</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workers.each do |worker| %>
+      <tr>
+        <td><%= worker.id %></td>
+        <td><%= worker.salary %></td>
+        <td><%= worker.exp_month %></td>
+        <td><%= link_to 'Show', worker %></td>
+        <td><%= link_to 'Edit', edit_worker_path(worker) %></td>
+        <td><%= link_to 'Destroy', worker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Update salaries PROCEDURE', update_salary_path %>
+<br>
+<%= link_to 'Add to salary PROCEDURE', add_to_salary_path %>
+<br>
+
+<%= link_to 'New Worker', new_worker_path %>

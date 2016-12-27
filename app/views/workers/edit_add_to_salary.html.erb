@@ -1,0 +1,16 @@
+<h1>Add to salary</h1>
+<% if flash[:error] %>
+  <div id="error_explanation">
+    <p class="flash-error"><%= flash[:error] %></p>
+  </div>
+<% end %>
+
+<%= form_tag '/add_to_salary' do %>
+  <%= label_tag :worker_id %>
+  <%= number_field_tag :worker_id %>
+
+  <%= label_tag :addition %>
+  <%= number_field_tag :new_salary%>
+
+  <%= submit_tag %>
+<% end %>

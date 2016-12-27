@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @worker.id %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @worker.salary %>
+</p>
+
+<p>
+  <strong>Exp month:</strong>
+  <%= @worker.exp_month %>
+</p>
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>

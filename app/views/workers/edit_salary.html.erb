@@ -1,0 +1,14 @@
+<h1>Update salaries</h1>
+
+<% if flash[:error] %>
+  <p class="flash-error"><%= flash[:error] %></p>
+<% end %>
+<%= form_tag '/update_salary' do %>
+  <%= label_tag :exp %>
+  <%= number_field_tag :exp %>
+
+  <%= label_tag :percent %>
+  <%= number_field_tag :percent%>
+
+  <%= submit_tag %>
+<% end %>
